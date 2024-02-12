@@ -1,0 +1,749 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.flex {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header styles */
+header {
+    width: 80%;
+    margin: auto;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+}
+
+header img[alt="logo"] {
+    padding-bottom: 6px;
+}
+
+nav {
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsl(219, 9%, 45%);
+    display: inline-block;
+    margin: 0px 15px;
+    padding: 24px 0px 30px;
+}
+
+nav ul li a:hover {
+    border-bottom: 3px solid var(--orange);
+    padding: 24px 0px 27px;
+}
+
+header #cart-dropdown,
+header #mobile-cart-dropdown {
+    position: absolute;
+    background-color: var(--white);
+    width: 280px;
+    right: -140px;
+    margin-top: 15px;
+    box-shadow: 0px 10px 15px 0px hsl(220, 14%, 75%);
+    border-radius: 10px;
+    display: none;
+}
+
+#cart-dropdown > p,
+#mobile-cart-dropdown > p {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 20px;
+    font-weight: 700;
+}
+
+#cart-dropdown #cart-details,
+#mobile-cart-dropdown #mobile-cart-details {
+    padding: 20px;
+    display: none;
+}
+
+#cart-dropdown #cart-details p span,
+#mobile-cart-dropdown #mobile-cart-details p span {
+    font-weight: 700;
+}
+
+#cart-dropdown button,
+#mobile-cart-dropdown button {
+    width: 100%;
+    padding: 12px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    font-weight: 700;
+}
+
+#cart-details .flex div {
+    margin: 0px 5px;
+    font-size: 0.8rem;
+}
+
+#cart-dropdown #product,
+#mobile-cart-dropdown #product {
+    width: 45px;
+    border-radius: 7px;
+}
+header #avatar {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+header #avatar:hover {
+    border: 2px solid var(--orange);
+}
+
+.cart-container {
+    margin-right: 25px;
+    position: relative;
+}
+
+.cart-container > img {
+    width: 18px;
+    cursor: pointer;
+}
+
+.cart-container .cart-counter {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 0.6rem;
+    display: inline-block;
+    padding: 0px 7px;
+    border-radius: 10px;
+    position: absolute;
+    right: -8px;
+    top: -5px;
+}
+
+p#empty-cart,
+p#mobile-empty-cart {
+    text-align: center;
+    padding: 60px 0px;
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.mobile-nav, 
+.mobile-main-image,
+header img[alt="icon-menu"],
+.cart-container > svg {
+    display: none;
+}
+
+.cart-container > svg > path {
+    fill: #69707D;
+}
+
+
+/* Main styles */
+main {
+    padding: 30px 0px;
+    width: 80%;
+    margin: auto;
+}
+
+main > * {
+    width: 40%;
+}
+
+main > div > img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+main > div > .thumbnails img {
+    width: 22%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main > div > .thumbnails img:hover {
+    opacity: 0.6;
+}
+
+.product-details .company {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.active-thumbnail {
+    opacity: 0.5;
+    border: 2px solid var(--orange);
+}
+
+.product-details > h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 15px 0px;
+}
+
+.product-details .description {
+    margin: 20px 0px;
+    font-size: 0.9rem;
+    color: hsl(219, 9%, 45%);
+    line-height: 1.5;
+}
+
+.product-details .price-details {
+    margin: 20px 0px;
+}
+
+.price-details #amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.price-details #discount {
+    display: inline-block;
+    color: var(--orange);
+    font-weight: 700;
+    background-color: hsl(25, 100%, 94%);
+    padding: 2px 7px;
+    border-radius: 7px;
+}
+
+.price-details #actual-amount {
+    text-decoration: line-through;
+    font-weight: 700;
+    margin-top: 10px;
+    color: hsl(220, 14%, 75%);
+}
+
+.btn-container .flex > * {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.btn-container .flex button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-container .flex button:first-child {
+    padding-top: 5px;
+}
+
+.btn-container .flex {
+    background-color: hsl(223, 64%, 98%);
+    border-radius: 10px;
+    width: 35%;
+    padding: 0px 10px;
+}
+
+.btn-container > button {
+    background-color: var(--orange);
+    width: 50%;
+    font-weight: 700;
+    color: var(--white);
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.btn-container > button > img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+/* Modal styles */
+
+.modal-container {
+    background-color: hsl(0, 0%, 0%, 0.75);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal {
+    width: 30%;
+    margin: auto;
+    text-align: right;
+    /* position: relative; */
+}
+
+.modal > svg {
+    cursor: pointer;
+}
+
+.modal > svg > path:hover {
+    fill: var(--orange);
+}
+
+.modal > svg > path {
+    fill: var(--white);
+    /* alternative way to align the close icon instead of using text-align right on thee .modal directly */ 
+    /* position: absolute;
+    right: 0px;
+    top: -20px; */
+}
+
+.modal div img[alt=image-product-1] {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.modal .modal-thumbnails {
+    width: 80%;
+    margin: auto;
+}
+
+.modal .modal-thumbnails > div > img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    object-fit: cover;
+}
+
+
+.modal .modal-thumbnails > div {
+    width: 22%;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    background-color: var(--white);
+    height: 70px;
+    border: none;
+}
+
+.modal .modal-thumbnails > div > img:hover {
+    opacity: 0.6;
+}
+
+.modal > div:first-of-type {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.modal div:first-of-type > .navigation-button {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.modal div:first-of-type > .navigation-button:hover path {
+    stroke: var(--orange);
+    
+}
+
+.modal div:first-of-type > .navigation-button[alt=icon-previous] {
+    left: -13px;
+    padding: 5px 5px 0px 0px;
+}
+
+
+.modal div:first-of-type > .navigation-button[alt=icon-next] {
+    right: -15px;
+    padding: 5px 0px 0px 5px;
+}
+
+/* responsiveness */
+@media screen and (max-width: 851px) {
+    nav,
+    .cart-container > img,
+    .desktop-main-image {
+        display: none;
+    }
+
+    header img[alt="icon-menu"],
+    .cart-container > svg,
+    .mobile-main-image {
+        display: block;
+    }
+
+    header {
+        width: 100%;
+        border-bottom: unset;
+        padding: 20px 30px;
+        position: relative;
+    }
+
+    .cart-container > svg > path {
+        fill: #69707D;
+    }
+
+    header img[alt="logo"] {
+        padding: unset;
+    }
+
+    header > div:first-of-type {
+        gap: 15px;
+    }
+
+    header #avatar {
+        width: 25px;
+    }
+
+    main.flex {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100%;
+        padding: unset;
+    }
+
+    main > * {
+        width: unset;
+    }
+
+    .mobile-main-image {
+        position: relative;
+        height: 700px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    main > div > img {
+        border-radius: unset;
+        width: 100%;
+        margin-top: -40px;
+    }
+
+    .mobile-main-image > .mmi-nav-button {
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        background-color: var(--white);
+        width: 50px;
+        height: 50px;
+        border: none;
+        cursor: pointer;   
+        z-index: 99;    
+    }
+
+    .mobile-main-image > .mmi-nav-button[alt=icon-previous] {
+        left: 20px;
+        padding: 5px 5px 0px 0px; 
+        z-index: 99;
+    }
+
+    .mobile-main-image > .mmi-nav-button[alt=icon-next] {
+        right: 20px;
+        padding: 5px 0px 0px 5px;        
+    }
+
+    .mobile-main-image > .mmi-nav-button > img {
+        width: 15px;
+    }
+
+    .product-details {
+        padding: 0px 30px 100px 30px;
+    }
+
+    .product-details > h1 {
+        font-size: 1.7rem;
+    }
+
+    .product-details .company {
+        font-size: 0.88rem;
+    }
+
+    .price-details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn-container.flex {
+        flex-direction: column;
+    }
+
+    .btn-container .flex {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .btn-container .flex > * {
+        padding: 15px 10px;
+    }
+
+    .btn-container > button  {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0px;
+        background-color: hsl(0, 0%, 0%, 0.7);
+        z-index: 9999;
+    }
+
+    .mobile-nav > div {
+        width: 66%;
+        background-color: var(--white);
+        height: 100vh;
+        padding-top: 25px;
+    }
+
+    .mobile-nav > div div {
+        width: 70%;
+        margin: auto;
+    }
+
+    .mobile-nav li {
+        list-style-type: none;
+        margin-bottom: 23px;
+    }
+
+    .mobile-nav a {
+        text-decoration: none;
+        display: inline-block;
+        color: black;
+        font-weight: 700;
+    }
+
+    .mobile-nav > div > div:first-of-type {
+        margin-bottom: 50px;
+    }
+
+    header #mobile-cart-dropdown {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        z-index: 9999;
+        background-color: var(--white);
+        width: 90%;
+        transform: translateX(-50%);
+        right: unset;
+        margin-top: 15px;
+        box-shadow: unset;
+        border-radius: 10px;
+        /* display: block; */
+    }
+
+    .cart-container {
+        position: relative;
+    }
+
+    p#mobile-empty-cart {
+        padding: 88px 0px;
+    }
+
+    #mobile-cart-details > div > div.flex {
+        gap: 10px;
+    }
+
+    #mobile-cart-details > div > div.flex > div > p:first-of-type {
+        padding-bottom: 10px;
+    }
+
+    #mobile-cart-dropdown button {
+        padding: 20px 12px;
+        margin-top: unset;
+        margin: 26.5px 0px;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    .mobile-main-image {
+        position: relative;
+        height: 690px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 772px) {
+    .mobile-main-image {
+        position: relative;
+        height: 650px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .mobile-main-image {
+        position: relative;
+        height: 630px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mobile-main-image {
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .mobile-main-image {
+        position: relative;
+        height: 550px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .mobile-main-image {
+        position: relative;
+        height: 520px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .mobile-main-image {
+        position: relative;
+        height: 470px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 550px){
+    .mobile-main-image > .mmi-nav-button {
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        background-color: var(--white);
+        width: 40px;
+        height: 40px;
+        border: none;
+        cursor: pointer;   
+        z-index: 99;    
+    }
+
+    .mobile-main-image > .mmi-nav-button > img {
+        width: 10px;
+    }
+}
+@media screen and (max-width: 523px) {
+    .mobile-main-image {
+        position: relative;
+        height: 430px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 474px) {
+    .mobile-main-image {
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 444px) {
+    .mobile-main-image {
+        position: relative;
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .mobile-main-image > .mmi-nav-button {
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+        background-color: var(--white);
+        width: 30px;
+        height: 30px;
+        border: none;
+        cursor: pointer;   
+        z-index: 99;    
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .mobile-main-image {
+        position: relative;
+        height: 320px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .mobile-main-image {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .mobile-main-image > .mmi-nav-button > img {
+        width: 8px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .mobile-main-image {
+        position: relative;
+        height: 270px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 318px) {
+    .mobile-main-image {
+        position: relative;
+        height: 240px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    .mobile-main-image {
+        position: relative;
+        height: 220px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+}
